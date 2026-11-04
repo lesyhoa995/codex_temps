@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rừng Xanh Việt | Dự án lâm nghiệp bền vững</title>
+    <style>
+      :root {
+        --forest: #174a36;
+        --leaf: #2f7a54;
+        --lime: #b9db74;
+        --cream: #f7f5ed;
+        --ink: #173129;
+        --muted: #607067;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--cream);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      .container { width: min(1120px, calc(100% - 40px)); margin: auto; }
+      nav {
+        position: absolute;
+        inset: 0 0 auto;
+        z-index: 2;
+        color: white;
+        padding: 22px 0;
+      }
+      .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+      .brand { font-weight: 800; letter-spacing: .04em; text-decoration: none; color: inherit; }
+      .brand span { color: var(--lime); }
+      .links { display: flex; gap: 26px; }
+      .links a { color: inherit; text-decoration: none; font-size: .93rem; }
+      .button {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 12px 22px;
+        background: var(--lime);
+        color: #173129;
+        text-decoration: none;
+        font-weight: 750;
+      }
+
+      .hero {
+        min-height: 650px;
+        display: grid;
+        align-items: end;
+        padding: 150px 0 90px;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(11, 49, 34, .91), rgba(12, 56, 39, .56)),
+          url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=85') center/cover;
+      }
+      .hero-content { max-width: 720px; }
+      .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 800; color: var(--lime); }
+      h1 { font-size: clamp(2.7rem, 6vw, 5.4rem); line-height: 1.04; margin: 12px 0 22px; letter-spacing: -.055em; }
+      .hero p { max-width: 600px; font-size: 1.12rem; color: #e4eee7; margin-bottom: 32px; }
+
+      section { padding: 88px 0; }
+      h2 { font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.12; letter-spacing: -.04em; margin: 10px 0 18px; }
+      .intro { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: center; }
+      .intro p, .card p { color: var(--muted); }
+      .quote { border-left: 3px solid var(--leaf); padding-left: 22px; font-size: 1.12rem; font-weight: 600; color: var(--forest); }
+      .stats { background: var(--forest); color: white; }
+      .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; text-align: center; }
+      .stat strong { display: block; color: var(--lime); font-size: clamp(2.2rem, 5vw, 3.7rem); line-height: 1; margin-bottom: 10px; }
+      .stat span { color: #d1dfd6; }
+      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 38px; }
+      .card { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 14px 35px rgba(24, 59, 43, .07); }
+      .card-icon { font-size: 2rem; }
+      .card h3 { margin: 12px 0 8px; }
+      .cta { text-align: center; background: #e6efd6; }
+      .cta p { max-width: 590px; margin: 0 auto 28px; color: var(--muted); }
+      footer { padding: 26px 0; background: #103325; color: #c8d7cf; font-size: .9rem; }
+      .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+
+      @media (max-width: 720px) {
+        .links { display: none; }
+        .hero { min-height: 590px; padding-bottom: 70px; }
+        section { padding: 62px 0; }
+        .intro, .cards, .stat-grid { grid-template-columns: 1fr; gap: 22px; }
+        .intro { gap: 30px; }
+        .stat { padding: 18px 0; }
+        .footer-inner { flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container nav-inner">
+        <a class="brand" href="#top">RỪNG <span>XANH</span> XUÂN MAI</a>
+        <div class="links">
+          <a href="#gioi-thieu">Giới thiệu</a>
+          <a href="#tac-dong">Tác động</a>
+          <a href="#hoat-dong">Hoạt động</a>
+        </div>
+        <a class="button" href="#tham-gia">Tham gia</a>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="eyebrow">Dự án lâm nghiệp bền vững</div>
+          <h1>Gieo mầm hôm nay,<br />xanh mãi ngày kia.</h1>
+          <p>Rừng Xanh Việt phục hồi rừng bản địa, đồng hành cùng cộng đồng địa phương và bảo vệ nguồn sống cho các thế hệ tương lai.</p>
+          <a class="button" href="#gioi-thieu">Khám phá dự án →</a>
+        </div>
+      </section>
+
+      <section id="gioi-thieu">
+        <div class="container intro">
+          <div>
+            <div class="eyebrow">Về chúng tôi</div>
+            <h2>Để rừng trở thành mái nhà chung.</h2>
+            <p>Thành lập năm 2023, Rừng Xanh Việt là sáng kiến hướng đến việc phục hồi các khu rừng suy thoái tại miền Trung Việt Nam bằng những loài cây bản địa phù hợp với hệ sinh thái.</p>
+            <p>Chúng tôi tin rằng bảo vệ rừng hiệu quả cần đặt con người ở trung tâm: tạo sinh kế xanh, lan toả kiến thức và cùng cộng đồng gìn giữ tài nguyên địa phương.</p>
+          </div>
+          <div class="quote">“Mỗi cây được trồng là một cam kết nhỏ, góp phần tạo nên một tương lai lớn hơn cho thiên nhiên và con người.”</div>
+        </div>
+      </section>
+
+      <section class="stats" id="tac-dong">
+        <div class="container stat-grid">
+          <div class="stat"><strong>25.000+</strong><span>Cây bản địa đã trồng</span></div>
+          <div class="stat"><strong>120 ha</strong><span>Diện tích phục hồi</span></div>
+          <div class="stat"><strong>18</strong><span>Nhóm cộng đồng đồng hành</span></div>
+        </div>
+      </section>
+
+      <section id="hoat-dong">
+        <div class="container">
+          <div class="eyebrow">Cách chúng tôi tạo tác động</div>
+          <h2>Ba hành động, một mục tiêu xanh.</h2>
+          <div class="cards">
+            <article class="card"><div class="card-icon">🌱</div><h3>Phục hồi rừng</h3><p>Ươm và trồng các loài cây bản địa để tái tạo thảm thực vật, tăng khả năng giữ nước và hấp thụ carbon.</p></article>
+            <article class="card"><div class="card-icon">🤝</div><h3>Đồng hành cộng đồng</h3><p>Hỗ trợ sinh kế từ nông lâm nghiệp bền vững, để người dân trở thành người bảo vệ rừng lâu dài.</p></article>
+            <article class="card"><div class="card-icon">📚</div><h3>Giáo dục xanh</h3><p>Tổ chức các chuyến học tập thực địa, giúp thế hệ trẻ hiểu và trân trọng giá trị của hệ sinh thái rừng.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="tham-gia">
+        <div class="container">
+          <div class="eyebrow">Cùng hành động</div>
+          <h2>Hãy để dấu chân bạn<br />ở lại màu xanh.</h2>
+          <p>Bạn có thể đóng góp cây giống, tham gia ngày trồng rừng hoặc trở thành đối tác của dự án.</p>
+          <a class="button" href="mailto:hello@rungxanhviet.vn">Liên hệ với chúng tôi</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner"><span>© 2026 Rừng Xanh Việt</span><span>Vì một Việt Nam xanh và bền vững.</span></div>
+    </footer>
+  </body>
+</html>
